@@ -1,0 +1,25 @@
+---
+title: "RMarkdown_Leaflet"
+author: "Grissel"
+date: "10/20/2020"
+output: html_document
+---
+
+```{r}
+library(knitr)
+library(leaflet)
+library(dplyr)
+```
+
+```{r}
+n <- leaflet() %>%
+  addTiles() %>%
+  addMarkers(lat = 13.3490, lng = 74.7856, popup = "Manipal, Karnataka") %>%
+  addMarkers(lat = 13.3490, lng = 74.7856, popup = "Udupi, Karnataka") %>%
+  addMarkers(lat = 12.9141, lng = 74.8560, popup = "Mangalore, Karnataka") %>%
+  addMarkers(lat = 12.9716, lng = 77.5946, popup = "Bangalore, Karnataka") 
+n
+  
+  
+```
+
